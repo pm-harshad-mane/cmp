@@ -57,7 +57,7 @@ export function init(configUpdates) {
 				fetchPurposeList().then(store.updateCustomPurposeList)
 			]).then(() => {
 
-				// legitimateConsent always reset value for consent on cmp load
+				// legitimateConsent always reset value for consent on cmp load, set consent to all
 				if(config.legitimateConsent === true){
 					log.debug('As config.legitimateConsent is set, setting consent for all purposes for all vendors.');
 					store.selectAllPurposes(true);
